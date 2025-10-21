@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router";
-
+import logo from "../assets/tree-icon.png";
 const Navbar = () => {
   const links = (
     <div className="flex items-center gap-2">
@@ -64,7 +64,8 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <a className="btn btn-ghost text-2xl text-[#0b6833] ">
+        <a className="btn btn-ghost text-2xl text-[#0b6833] border">
+          <img className="w-[40px] h-[40px]" src={logo} alt="" />
           <span className="font-bold">Green</span>
           <span className="">Nest</span>
         </a>
@@ -72,11 +73,19 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
-      <div className="navbar-end ">
-        <a className="btn bg-[#0fbd5a] text-white font-semibold text-lg">
+      <details className="navbar-end  dropdown">
+        <summary className="btn bg-[#0fbd5a] text-white font-semibold text-lg">
           Button
-        </a>
-      </div>
+        </summary>
+        <ul className="menu dropdown-content bg-base-100 rounded-box   p-2 shadow-sm">
+          <li>
+            <a>Item 1</a>
+          </li>
+          <li>
+            <a>Item 2</a>
+          </li>
+        </ul>
+      </details>
     </div>
   );
 };
