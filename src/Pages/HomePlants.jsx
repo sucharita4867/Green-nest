@@ -9,7 +9,7 @@ const HomePlants = () => {
       .catch((err) => console.log(err));
   }, []);
   return (
-    <div className=" w-11/12 mx-auto mt-10">
+    <div className=" w-11/12 mx-auto mt-8">
       <div className="my-8 text-center  flex-col ">
         <h2 className=" text-[#0D3C00]  text-4xl font-bold">
           Top Rated Indoor Plants
