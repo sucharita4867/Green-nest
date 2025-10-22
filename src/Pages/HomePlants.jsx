@@ -9,34 +9,46 @@ const HomePlants = () => {
       .catch((err) => console.log(err));
   }, []);
   return (
-    <div className="border border-red-600 w-11/12 mx-auto mt-10">
-      <div className="my-5 text-center  flex-col ">
+    <div className=" w-11/12 mx-auto mt-10">
+      <div className="my-8 text-center  flex-col ">
         <h2 className=" text-[#0D3C00]  text-4xl font-bold">
           Top Rated Indoor Plants
         </h2>
-        <div className="flex justify-center text-lg mt-3 text-[#848483]">
-          <p className="border md:w-[60%] ">
+        <div className="flex justify-center text-lg mt-4 text-[#848483]">
+          <p className="md:w-[60%] ">
             “Discover our highest-rated indoor plants, loved by plant
             enthusiasts. Bring home greenery that purifies air, brightens
             spaces, and boosts mood.”
           </p>
         </div>
       </div>
-      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 border">
+      <div className="grid lg:grid-cols-4 gap-6 md:grid-cols-3 grid-cols-1 ">
         {plants.map((plant) => (
-          <div key={plant.id} className="">
-            <div className="card bg-base-100 w-96 shadow-sm">
-              <figure>
-                <img src={plant.image} alt="Shoes" />
+          <div key={plant.plantName} className="">
+            <div className="card w-auto shadow-xl border-[#0D3C00] hover:border">
+              <figure className="">
+                <img
+                  className="w-full h-[300px]"
+                  src={plant.image}
+                  alt="Shoes"
+                />
               </figure>
-              <div className="card-body">
-                <h2 className="card-title">Card Title</h2>
-                <p>
-                  A card component has a figure, a body part, and inside body
-                  there are title and actions parts
-                </p>
-                <div className="card-actions justify-end">
-                  <button className="btn btn-primary">Buy Now</button>
+              <div className="space-y-4 p-2">
+                <h2 className=" text-2xl font-medium text-center text-[#0D3C00] hover:text-[#6A961F]">
+                  {plant.plantName}
+                </h2>
+                <div className="flex items-center justify-between">
+                  <p className="text-lg font-semibold text-[#0D3C00]">
+                    Price : {plant.price}
+                  </p>
+                  <p className="text-lg font-semibold text-[#0D3C00] ">
+                    Rating : {plant.rating}
+                  </p>
+                </div>
+                <div className=" ">
+                  <button className="btn text-white bg-[#0D3C00] hover:bg-[#6A961F] w-full">
+                    View Details
+                  </button>
                 </div>
               </div>
             </div>

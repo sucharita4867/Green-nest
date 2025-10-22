@@ -94,17 +94,5 @@
     "description": "Glossy leaves, grows tall, adds elegance to living rooms.",
     "image": "https://i.ibb.co/4wWD51qv/Rubber-Plant.jpg",
     "providerName": "GreenLeaf Co."
-  },
-  {
-    "plantId": 9,
-    "plantName": "Boston Fern",
-    "category": "Hanging",
-    "price": 20,
-    "rating": 4.5,
-    "availableStock": 7,
-    "careLevel": "Medium",
-    "description": "Lush green fronds, prefers humid spots and indirect light.",
-    "image": "https://i.ibb.co/dCGS5Ln/Boston-Fern.jpg",
-    "providerName": "UrbanGreen Studio"
   }
 ]
