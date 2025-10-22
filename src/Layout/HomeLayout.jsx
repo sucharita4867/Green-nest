@@ -10,7 +10,8 @@ const HomeLayout = () => {
         <Navbar></Navbar>
       </header>
       <main>
-        <Outlet></Outlet>
+        <Outlet>
+        </Outlet>
       </main>
       <footer>
         <Footer></Footer>

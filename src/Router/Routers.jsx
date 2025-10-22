@@ -3,6 +3,7 @@ import HomeLayout from "../Layout/HomeLayout";
 import Plants from "../Pages/Plants";
 import Profile from "../Pages/Profile";
 import Home from "../Pages/Home";
+import HomePlants from "../Pages/HomePlants";
 
 const router = createBrowserRouter([
   {

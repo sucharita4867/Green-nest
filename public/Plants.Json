@@ -1,0 +1,110 @@
+[
+  {
+    "plantId": 1,
+    "plantName": "Snake Plant",
+    "category": "Air Purifier",
+    "price": 18,
+    "rating": 4.8,
+    "availableStock": 10,
+    "careLevel": "Easy",
+    "description": "A hardy plant that purifies indoor air and thrives in low light.",
+    "image": "https://i.ibb.co/67zJvyHG/Snake-Plant.jpg",
+    "providerName": "UrbanGreen Studio"
+  },
+  {
+    "plantId": 2,
+    "plantName": "Peace Lily",
+    "category": "Flowering",
+    "price": 25,
+    "rating": 4.7,
+    "availableStock": 8,
+    "careLevel": "Medium",
+    "description": "Elegant white flowers that brighten indoor spaces and filter air.",
+    "image": "https://i.ibb.co/fVN6FfK9/Peace-Lily.jpg",
+    "providerName": "GreenLeaf Co."
+  },
+  {
+    "plantId": 3,
+    "plantName": "Aloe Vera",
+    "category": "Medicinal",
+    "price": 15,
+    "rating": 4.9,
+    "availableStock": 12,
+    "careLevel": "Easy",
+    "description": "A succulent known for its soothing gel and low maintenance.",
+    "image": "https://i.ibb.co/twDZ07XK/Aloe-Vera.jpg",
+    "providerName": "UrbanGreen Studio"
+  },
+  {
+    "plantId": 4,
+    "plantName": "ZZ Plant",
+    "category": "Low Light",
+    "price": 22,
+    "rating": 4.6,
+    "availableStock": 7,
+    "careLevel": "Easy",
+    "description": "Tolerant of low light and neglect, perfect for indoor corners.",
+    "image": "https://i.ibb.co/bjY2FtBJ/ZZ-Plant.jpg",
+    "providerName": "LeafyHome"
+  },
+  {
+    "plantId": 5,
+    "plantName": "Fiddle Leaf Fig",
+    "category": "Decorative",
+    "price": 40,
+    "rating": 4.5,
+    "availableStock": 5,
+    "careLevel": "Medium",
+    "description": "Large glossy leaves that make a stylish statement indoors.",
+    "image": "https://i.ibb.co/CKFyngNX/Fiddle-Leaf-Fig.jpg",
+    "providerName": "GreenLeaf Co."
+  },
+  {
+    "plantId": 6,
+    "plantName": "Pothos",
+    "category": "Trailing",
+    "price": 12,
+    "rating": 4.8,
+    "availableStock": 15,
+    "careLevel": "Easy",
+    "description": "Fast-growing vine, great for hanging baskets or shelves.",
+    "image": "https://i.ibb.co/fzRMTFwz/Pothos.jpg",
+    "providerName": "UrbanGreen Studio"
+  },
+  {
+    "plantId": 7,
+    "plantName": "Spider Plant",
+    "category": "Air Purifier",
+    "price": 14,
+    "rating": 4.7,
+    "availableStock": 9,
+    "careLevel": "Easy",
+    "description": "Attractive variegated leaves, produces offshoots for propagation.",
+    "image": "https://i.ibb.co/zV5JyLKH/Spider-Plant.jpg",
+    "providerName": "LeafyHome"
+  },
+  {
+    "plantId": 8,
+    "plantName": "Rubber Plant",
+    "category": "Indoor Tree",
+    "price": 30,
+    "rating": 4.6,
+    "availableStock": 6,
+    "careLevel": "Medium",
+    "description": "Glossy leaves, grows tall, adds elegance to living rooms.",
+    "image": "https://i.ibb.co/4wWD51qv/Rubber-Plant.jpg",
+    "providerName": "GreenLeaf Co."
+  },
+  {
+    "plantId": 9,
+    "plantName": "Boston Fern",
+    "category": "Hanging",
+    "price": 20,
+    "rating": 4.5,
+    "availableStock": 7,
+    "careLevel": "Medium",
+    "description": "Lush green fronds, prefers humid spots and indirect light.",
+    "image": "https://i.ibb.co/dCGS5Ln/Boston-Fern.jpg",
+    "providerName": "UrbanGreen Studio"
+  }
+]
