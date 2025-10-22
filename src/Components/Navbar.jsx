@@ -1,33 +1,32 @@
 import React from "react";
 import { NavLink } from "react-router";
-import logo from "../assets/tree-icon.png";
 const Navbar = () => {
   const links = (
     <div className="flex items-center gap-2">
-      <li className="text-[#0b6833] font-semibold text-lg">
+      <li className="text-[#0D3C00] font-semibold text-lg">
         <NavLink
           className={({ isActive }) =>
-            isActive ? "text-[#0fbd5a] underline" : ""
+            isActive ? "text-[#6A961F] underline" : ""
           }
           to={"/"}
         >
           Home
         </NavLink>
       </li>
-      <li className="text-[#0b6833] font-semibold text-lg">
+      <li className="text-[#0D3C00] font-semibold text-lg">
         <NavLink
           className={({ isActive }) =>
-            isActive ? "text-[#0fbd5a] underline" : ""
+            isActive ? "text-[#6A961F] underline" : ""
           }
           to={"/plants"}
         >
           plants
         </NavLink>
       </li>
-      <li className="text-[#0b6833] font-semibold text-lg">
+      <li className="text-[#0D3C00] font-semibold text-lg">
         <NavLink
           className={({ isActive }) =>
-            isActive ? "text-[#0fbd5a] underline" : ""
+            isActive ? "text-[#6A961F] underline" : ""
           }
           to={"/profile"}
         >
@@ -64,8 +63,7 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <a className="btn btn-ghost text-2xl text-[#0b6833] border">
-          <img className="w-[40px] h-[40px]" src={logo} alt="" />
+        <a className="btn btn-ghost text-2xl text-[#0D3C00] border">
           <span className="font-bold">Green</span>
           <span className="">Nest</span>
         </a>
@@ -74,7 +72,7 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
       <details className="navbar-end  dropdown">
-        <summary className="btn bg-[#0fbd5a] text-white font-semibold text-lg">
+        <summary className="btn bg-[#6A961F] text-white font-semibold text-lg">
           Button
         </summary>
         <ul className="menu dropdown-content bg-base-100 rounded-box   p-2 shadow-sm">
