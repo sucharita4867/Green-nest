@@ -4,6 +4,8 @@ import Plants from "../Pages/Plants";
 import Profile from "../Pages/Profile";
 import Home from "../Pages/Home";
 import HomePlants from "../Pages/HomePlants";
+import SignUp from "../Pages/SignUp";
+import Signin from "../Pages/Signin";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +34,14 @@ const router = createBrowserRouter([
   {
     path: "/*",
     element: <h2>error 404 layout</h2>,
+  },
+  {
+    path: "/signup",
+    element: <SignUp></SignUp>,
+  },
+  {
+    path: "/signin",
+    element: <Signin></Signin>,
   },
 ]);
 export default router;

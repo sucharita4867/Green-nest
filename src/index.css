@@ -1,2 +1,6 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+.mt-btn {
+      @apply bg-[#6A961F] text-white
+}
