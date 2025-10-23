@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router";
+import { Link, NavLink } from "react-router";
 const Navbar = () => {
   const links = (
     <div className="flex items-center gap-2">
@@ -71,16 +71,16 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
-      <details className="navbar-end  dropdown">
-        <summary className="btn bg-[#6A961F] text-white font-semibold text-lg">
-          Button
+      <details className="navbar-end relative dropdown">
+        <summary className="btn bg-[#6A961F] text-white font-semibold text-lg cursor-pointer">
+          <Link to="/auth/signin">Sign In</Link>
         </summary>
-        <ul className="menu dropdown-content bg-base-100 rounded-box   p-2 shadow-sm">
+        <ul className="absolute right-0 mt-2 w-40 bg-base-100 rounded-box p-2 shadow-sm menu">
           <li>
-            <a>Item 1</a>
+            <a>Sign In Page</a>
           </li>
           <li>
-            <a>Item 2</a>
+            <a href="#">Item 2</a>
           </li>
         </ul>
       </details>
