@@ -43,10 +43,9 @@ const HomePlants = () => {
                     Price : ${plant.price}
                   </p>
                   <p className="text-lg font-semibold flex items-center text-[#0D3C00] ">
-                    Rating :
-                    <div className="text-yellow-500">
-                      <FaStar />
-                    </div>
+                    Rating :{/* <div className="text-yellow-500"> */}
+                    <FaStar className="text-yellow-500" />
+                    {/* </div> */}
                     {plant.rating}
                   </p>
                 </div>

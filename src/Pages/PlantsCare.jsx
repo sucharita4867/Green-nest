@@ -14,7 +14,7 @@ const PlantsCare = () => {
           </p>
         </div>
       </div>
-      <div className=" flex  gap-8 items-center ">
+      <div className=" md:flex   gap-8 items-center ">
         <figure>
           <img
             className="h-[550px] w-[500px] rounded-xl"
@@ -25,7 +25,7 @@ const PlantsCare = () => {
         <div className="space-y-3 flex-1">
           <ol className=" ">
             <p className="text-2xl font-medium text-[#0D3C00]">Watering:</p>
-            <li className="text-lg font-semibold text-[#848483] ">
+            <li className="text-lg text-[#848483] ">
               “Water your plants 2–3 times per week or when the top 1–2 inches
               of soil feel dry. Avoid overwatering, as it can damage roots and
               hinder healthy growth.”
@@ -33,7 +33,7 @@ const PlantsCare = () => {
           </ol>
           <div>
             <p className="text-2xl font-medium text-[#0D3C00]">Sunlight:</p>
-            <p className="text-lg font-semibold text-[#848483] ">
+            <p className="text-lg text-[#848483] ">
               “Provide 4–6 hours of indirect sunlight daily for your plants.
               Avoid harsh direct sunlight for sensitive plants, ensuring they
               receive enough light to grow healthy and strong.”
@@ -41,7 +41,7 @@ const PlantsCare = () => {
           </div>
           <div>
             <p className="text-2xl font-medium text-[#0D3C00]">Fertilizer:</p>
-            <p className="text-lg font-semibold text-[#848483] ">
+            <p className="text-lg text-[#848483] ">
               “Apply a balanced liquid fertilizer every 4–6 weeks during spring
               and summer to promote healthy growth. Reduce or pause fertilizing
               during winter when plants grow slowly.”
@@ -49,7 +49,7 @@ const PlantsCare = () => {
           </div>
           <div>
             <p className="text-2xl font-medium text-[#0D3C00]">Extra Tips:</p>
-            <p className="text-lg font-semibold text-[#848483] ">
+            <p className="text-lg text-[#848483] ">
               “Wipe leaves regularly to keep them dust-free, mist occasionally
               to maintain humidity, and use organic or safe pesticides if pests
               appear to ensure plants stay healthy.”
