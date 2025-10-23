@@ -9,8 +9,9 @@ const ExpertsSections = () => {
         </h2>
         <div className="flex justify-center text-lg mt-4 text-[#848483]">
           <p className="md:w-[60%] ">
-            “Learn essential tips on watering, sunlight, and fertilizing to keep
-            your plants healthy, thriving, and your home full of greenery.”
+            “Our experienced plant experts help you care for your greens. From
+            watering to soil care, they share tips for healthy and thriving
+            plants.”
           </p>
         </div>
       </div>

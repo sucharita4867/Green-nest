@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { FaStar } from "react-icons/fa";
 
 const HomePlants = () => {
   const [plants, setPlants] = useState([]);
@@ -39,10 +40,14 @@ const HomePlants = () => {
                 </h2>
                 <div className="flex items-center justify-between">
                   <p className="text-lg font-semibold text-[#0D3C00]">
-                    Price : {plant.price}
+                    Price : ${plant.price}
                   </p>
-                  <p className="text-lg font-semibold text-[#0D3C00] ">
-                    Rating : {plant.rating}
+                  <p className="text-lg font-semibold flex items-center text-[#0D3C00] ">
+                    Rating :
+                    <div className="text-yellow-500">
+                      <FaStar />
+                    </div>
+                    {plant.rating}
                   </p>
                 </div>
                 <div className=" ">
