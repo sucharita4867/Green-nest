@@ -7,6 +7,7 @@ import HomePlants from "../Pages/HomePlants";
 import SignUp from "../Pages/SignUp";
 import Signin from "../Pages/Signin";
 import AuthLayout from "../Layout/AuthLayout";
+import DetailsContainer from "../Pages/DetailsContainer";
 
 const router = createBrowserRouter([
   {
@@ -19,8 +20,9 @@ const router = createBrowserRouter([
         element: <Home></Home>,
       },
       {
-        path: "/card-details/:id",
-        element: <Plants></Plants>,
+        path: "/plants",
+        element: <Plants />,
+        // loader: () => fetch("/plants.json").then((res) => res.json()),
       },
       {
         path: "/profile",
@@ -35,6 +37,11 @@ const router = createBrowserRouter([
   {
     path: "/*",
     element: <h2>error 404 layout</h2>,
+  },
+  {
+    path: "/card-details/:id",
+    element: <DetailsContainer></DetailsContainer>,
+    loader: () => fetch("/Plants.Json"),
   },
   {
     path: "/auth",

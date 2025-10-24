@@ -1,11 +1,16 @@
-import React from 'react';
+
+
+import HomePlants from "./HomePlants";
 
 const Plants = () => {
-      return (
-            <div>
-                  <h2>all plants</h2>
-            </div>
-      );
+
+
+  return (
+    <div>
+      <HomePlants />
+      
+    </div>
+  );
 };
 
 export default Plants;

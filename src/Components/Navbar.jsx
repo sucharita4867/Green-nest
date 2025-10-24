@@ -32,7 +32,7 @@ const Navbar = () => {
           className={({ isActive }) =>
             isActive ? "text-[#6A961F] underline" : ""
           }
-          to={"/card-details/:id"}
+          to={"/plants"}
         >
           plants
         </NavLink>
