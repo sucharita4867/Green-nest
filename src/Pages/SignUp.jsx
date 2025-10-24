@@ -1,11 +1,34 @@
-import React from "react";
+import React, { use } from "react";
 import { Link } from "react-router";
+import { AuthContext } from "../Provider/AuthProvider";
+import { toast } from "react-toastify";
 
 const SignUp = () => {
+  const { createUser, setUser } = use(AuthContext);
+  const handleSignUp = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const name = form.name.value;
+    const photo = form.photo.value;
+    const email = form.email.value;
+    const password = form.password.value;
+    console.log({ name, photo, email, password });
+    createUser(email, password)
+      .then((result) => {
+        const user = result.user;
+        setUser(user);
+        toast.success("Signup successful! Welcome to GreenNest 🌿");
+      })
+      .catch((error) => {
+        //   const errorCode = error.code;
+        const errorMessage = error.message;
+        toast.success(errorMessage);
+      });
+  };
   return (
     <div className="flex justify-center items-center py-4">
       <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-        <div className="card-body">
+        <form onSubmit={handleSignUp} className="card-body">
           <h1 className="text-center font-bold text-4xl">Sign Up</h1>
           <fieldset className="fieldset">
             {/*name  */}
@@ -15,6 +38,7 @@ const SignUp = () => {
               name="name"
               className="input"
               placeholder="Name"
+              required
             />
             {/*photo Url */}
             <label className="label">Photo URl</label>
@@ -23,6 +47,7 @@ const SignUp = () => {
               name="photo"
               className="input"
               placeholder="Photo URl"
+              required
             />
             {/*email  */}
             <label className="label">Email</label>
@@ -31,6 +56,7 @@ const SignUp = () => {
               name="email"
               className="input"
               placeholder="Email"
+              required
             />
             {/* password */}
             <label className="label">Password</label>
@@ -39,8 +65,11 @@ const SignUp = () => {
               name="password"
               className="input"
               placeholder="Password"
+              required
             />
-            <button className="btn mt-btn mt-2">sign up</button>
+            <button type="submit" className="btn mt-btn mt-2">
+              sign up
+            </button>
             <p>
               Already have an account ?
               <Link to="/auth/signin" className="underline">
@@ -48,7 +77,7 @@ const SignUp = () => {
               </Link>
             </p>
           </fieldset>
-        </div>
+        </form>
       </div>
     </div>
   );

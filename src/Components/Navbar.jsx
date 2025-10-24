@@ -1,6 +1,20 @@
-import React from "react";
+import { use } from "react";
 import { Link, NavLink } from "react-router";
+import { AuthContext } from "../Provider/AuthProvider";
+import { toast } from "react-toastify";
 const Navbar = () => {
+  const { user, logOut } = use(AuthContext);
+
+  const handleSignout = () => {
+    logOut()
+      .then(() => {
+        toast("you sign out successfully");
+      })
+      .catch((err) => {
+        toast(err);
+      });
+  };
+
   const links = (
     <div className="flex items-center gap-2">
       <li className="text-[#0D3C00] font-semibold text-lg">
@@ -18,7 +32,7 @@ const Navbar = () => {
           className={({ isActive }) =>
             isActive ? "text-[#6A961F] underline" : ""
           }
-          to={"/plants"}
+          to={"/card-details/:id"}
         >
           plants
         </NavLink>
@@ -71,19 +85,30 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
-      <details className="navbar-end relative dropdown">
-        <summary className="btn bg-[#6A961F] text-white font-semibold text-lg cursor-pointer">
-          <Link to="/auth/signin">Sign In</Link>
-        </summary>
-        <ul className="absolute right-0 mt-2 w-40 bg-base-100 rounded-box p-2 shadow-sm menu">
-          <li>
-            <a>Sign In Page</a>
-          </li>
-          <li>
-            <a href="#">Item 2</a>
-          </li>
-        </ul>
-      </details>
+      {user ? (
+        <div className="navbar-end flex items-center gap-3">
+          <img src={user.photoURL} alt="" className="w-10 h-10 rounded-full" />
+          <details className="dropdown">
+            <summary>{user.displayName}</summary>
+            <ul className="menu dropdown-content bg-base-100 rounded-box">
+              <li>
+                <button
+                  className="bg-[#6A961F] text-white"
+                  onClick={handleSignout}
+                >
+                  Sign Out
+                </button>
+              </li>
+            </ul>
+          </details>
+        </div>
+      ) : (
+        <div className="navbar-end   ">
+          <Link className="btn bg-[#6A961F] text-white" to="/auth/signin">
+            Sign In
+          </Link>
+        </div>
+      )}
     </div>
   );
 };

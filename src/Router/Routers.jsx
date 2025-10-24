@@ -19,7 +19,7 @@ const router = createBrowserRouter([
         element: <Home></Home>,
       },
       {
-        path: "/plants",
+        path: "/card-details/:id",
         element: <Plants></Plants>,
       },
       {

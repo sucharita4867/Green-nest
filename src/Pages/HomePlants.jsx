@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FaStar } from "react-icons/fa";
+import { Link } from "react-router";
 
 const HomePlants = () => {
   const [plants, setPlants] = useState([]);
@@ -49,11 +50,11 @@ const HomePlants = () => {
                     {plant.rating}
                   </p>
                 </div>
-                <div className=" ">
+                <Link to={`/card-details/${plant.id}`} className=" ">
                   <button className="btn text-white bg-[#0D3C00] hover:bg-[#6A961F] w-full">
                     View Details
                   </button>
-                </div>
+                </Link>
               </div>
             </div>
           </div>
