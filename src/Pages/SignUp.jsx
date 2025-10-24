@@ -1,10 +1,14 @@
-import React, { use } from "react";
-import { Link } from "react-router";
+import React, { use, useState } from "react";
+import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../Provider/AuthProvider";
 import { toast } from "react-toastify";
+import { FaEye, FaShower } from "react-icons/fa";
+import { IoEyeOff } from "react-icons/io5";
 
 const SignUp = () => {
   const { createUser, setUser } = use(AuthContext);
+  const navigate = useNavigate();
+  const [show, setShow] = useState(false);
   const handleSignUp = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -13,16 +17,25 @@ const SignUp = () => {
     const email = form.email.value;
     const password = form.password.value;
     console.log({ name, photo, email, password });
+    if (!/^(?=.*[A-Z])(?=.*[a-z]).{6,}$/.test(password)) {
+      toast.error(
+        "Password must be at least 6 characters long and include both uppercase and lowercase letters!"
+      );
+      return;
+    }
+
     createUser(email, password)
       .then((result) => {
         const user = result.user;
         setUser(user);
         toast.success("Signup successful! Welcome to GreenNest 🌿");
+        form.reset();
+        navigate("/");
       })
       .catch((error) => {
         //   const errorCode = error.code;
         const errorMessage = error.message;
-        toast.success(errorMessage);
+        toast.error(errorMessage);
       });
   };
   return (
@@ -61,14 +74,22 @@ const SignUp = () => {
               required
             />
             {/* password */}
-            <label className="label">Password</label>
-            <input
-              type="password"
-              name="password"
-              className="input"
-              placeholder="Password"
-              required
-            />
+            <div className="relative">
+              <label className="label">Password</label>
+              <input
+                type={show ? "text" : "password"}
+                name="password"
+                className="input"
+                placeholder="Password"
+                required
+              />
+              <span
+                onClick={() => setShow(!show)}
+                className="absolute right-[32px] top-[32px] cursor-pointer z-50"
+              >
+                {show ? <FaEye /> : <IoEyeOff />}
+              </span>
+            </div>
             <button type="submit" className="btn mt-btn mt-2">
               sign up
             </button>

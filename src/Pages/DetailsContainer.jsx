@@ -10,37 +10,10 @@ const DetailsContainer = () => {
   const data = useLoaderData();
   const { id } = useParams();
   const [card, setCard] = useState({});
-  //   console.log(data, id, card);
   useEffect(() => {
     const cardDetails = data.find((singleCard) => singleCard.id == id);
     setCard(cardDetails);
   }, [data, id]);
-  //   const [card, setCard] = useState(null);
-  //   const [loading, setLoading] = useState(true);
-  //   const [error, setError] = useState(null);
-
-  //   useEffect(() => {
-  //     setLoading(true);
-  //     fetch("/plants.json")
-  //       .then((res) => {
-  //         if (!res.ok) {
-  //           throw new Error("Failed to fetch plants.json");
-  //         }
-  //         return res.json();
-  //       })
-  //       .then((data) => {
-  //         const cardDetails = data.find(
-  //           (singleCard) => singleCard.id === parseInt(id)
-  //         );
-  //         setCard(cardDetails || null);
-  //       })
-  //       .catch((err) => setError(err.message))
-  //       .finally(() => setLoading(false));
-  //   }, [id]);
-
-  //   if (loading) return <p>Loading...</p>;
-  //   if (error) return <p>Error: {error}</p>;
-  //   if (!card) return <p>Card not found!</p>;
 
   return (
     <div className="bg-[#FAF5F2]">
