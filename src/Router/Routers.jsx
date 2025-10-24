@@ -8,6 +8,7 @@ import SignUp from "../Pages/SignUp";
 import Signin from "../Pages/Signin";
 import AuthLayout from "../Layout/AuthLayout";
 import DetailsContainer from "../Pages/DetailsContainer";
+import PrivateRoute from "../Provider/Privateroute";
 
 const router = createBrowserRouter([
   {
@@ -40,7 +41,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/card-details/:id",
-    element: <DetailsContainer></DetailsContainer>,
+    element: (
+      <PrivateRoute>
+        <DetailsContainer></DetailsContainer>
+      </PrivateRoute>
+    ),
     loader: () => fetch("/Plants.Json"),
   },
   {

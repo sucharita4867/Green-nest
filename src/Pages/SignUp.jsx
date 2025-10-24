@@ -29,7 +29,9 @@ const SignUp = () => {
     <div className="flex justify-center items-center py-4">
       <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
         <form onSubmit={handleSignUp} className="card-body">
-          <h1 className="text-center font-bold text-4xl">Sign Up</h1>
+          <h1 className="text-center text-[#0D3C00] font-bold text-4xl">
+            Sign Up
+          </h1>
           <fieldset className="fieldset">
             {/*name  */}
             <label className="label">Name</label>
@@ -70,9 +72,9 @@ const SignUp = () => {
             <button type="submit" className="btn mt-btn mt-2">
               sign up
             </button>
-            <p>
+            <p className="text-sm text-center font-semibold">
               Already have an account ?
-              <Link to="/auth/signin" className="underline">
+              <Link to="/auth/signin" className="underline text-[#0D3C00]">
                 Sign in
               </Link>
             </p>

@@ -1,4 +1,5 @@
 import React from "react";
+import { FaStar } from "react-icons/fa";
 
 const CardDetails = ({ card }) => {
   //   console.log(card);
@@ -34,9 +35,7 @@ const CardDetails = ({ card }) => {
             <span className="font-semibold">Available Stock:</span>{" "}
             {availableStock} pcs
           </p>
-          <p className="text-lg text-gray-700">
-            <span className="font-semibold">Rating:</span> ⭐ {rating}
-          </p>
+
           <p className="text-lg text-gray-700">
             <span className="font-semibold">Provider:</span> {providerName}
           </p>
@@ -48,10 +47,10 @@ const CardDetails = ({ card }) => {
             <p className="text-2xl font-semibold text-[#6A961F]">
               ${card?.price?.toFixed(2)}
             </p>
-
-            <button className="bg-[#6A961F] hover:bg-[#557C1A] text-white px-6 py-2 rounded-lg font-semibold transition-all">
-              Add to Cart
-            </button>
+            <p className=" text-[#6A961F] gap-2 text-2xl flex items-center font-semibold">
+              <FaStar className="text-yellow-400" />
+              {rating}
+            </p>
           </div>
         </div>
       </div>

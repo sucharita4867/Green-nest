@@ -12,18 +12,6 @@ const HomePlants = () => {
   }, []);
   return (
     <div className=" w-11/12 mx-auto mt-8">
-      <div className="my-8 text-center  flex-col ">
-        <h2 className=" text-[#0D3C00]  text-4xl font-bold">
-          Top Rated Indoor Plants
-        </h2>
-        <div className="flex justify-center text-lg mt-4 text-[#848483]">
-          <p className="md:w-[60%] ">
-            “Discover our highest-rated indoor plants, loved by plant
-            enthusiasts. Bring home greenery that purifies air, brightens
-            spaces, and boosts mood.”
-          </p>
-        </div>
-      </div>
       <div className="grid lg:grid-cols-4 gap-6 md:grid-cols-3 grid-cols-1 ">
         {plants.map((plant) => (
           <div key={plant.plantName} className="">

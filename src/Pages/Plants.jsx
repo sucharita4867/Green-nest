@@ -1,14 +1,9 @@
-
-
 import HomePlants from "./HomePlants";
 
 const Plants = () => {
-
-
   return (
-    <div>
+    <div className="mb-10">
       <HomePlants />
-      
     </div>
   );
 };
