@@ -17,7 +17,7 @@ const ForgetPassword = () => {
       return;
     }
     sendPasswordResetEmail(auth, email)
-      .then(() => toast.success("Password reset email sent! Check your Gmail."))
+      .then(() => toast.success("Password reset email sent! Check Gmail."))
       .catch((err) => toast.error(err.message));
   };
   return (
@@ -26,12 +26,12 @@ const ForgetPassword = () => {
         <Navbar />
       </header>
       <main>
-        <div className="flex justify-center items-center py-4">
+        <div className="flex justify-center items-center py-12">
           <form
             onSubmit={handleReset}
             className="card w-full max-w-sm p-4 shadow-lg"
           >
-            <h2 className="text-2xl font-bold text-center mb-4">
+            <h2 className="text-2xl font-bold text-center text-[#0D3C00] mb-4">
               Reset Password
             </h2>
             <input
@@ -39,10 +39,13 @@ const ForgetPassword = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email"
-              className="input w-full mb-4"
+              className="input w-full"
               required
             />
-            <button type="submit" className="btn w-full">
+            <button
+              type="submit"
+              className="btn mt-4 text-white bg-[#6A961F] w-full"
+            >
               Reset Password
             </button>
           </form>

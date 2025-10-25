@@ -2,7 +2,6 @@ import React from "react";
 import { FaStar } from "react-icons/fa";
 
 const CardDetails = ({ card }) => {
-  //   console.log(card);
   const {
     plantName,
     category,

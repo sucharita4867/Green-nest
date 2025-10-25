@@ -1,12 +1,20 @@
-import React from "react";
+import React, { use } from "react";
 import Banner from "./Banner";
 import HomePlants from "./HomePlants";
 import PlantsCare from "./PlantsCare";
 import ExpertsSections from "./ExpertsSections";
+import EcoDecorIdeas from "../Components/EcoDecorIdeas";
+import PlantOfWeek from "./PlantOfWeek";
+import { AuthContext } from "../Provider/AuthProvider";
+import Loading from "./Loading";
 
 const Home = () => {
+  const { loading } = use(AuthContext);
+  if (loading) {
+    return <Loading />;
+  }
   return (
-    <div>
+    <div className="bg-[#F7FAF2]">
       <Banner></Banner>
       <section>
         <div className="my-8 text-center  flex-col ">
@@ -14,7 +22,7 @@ const Home = () => {
             Top Rated Indoor Plants
           </h2>
           <div className="flex justify-center text-lg mt-4 text-[#848483]">
-            <p className="md:w-[60%] ">
+            <p className="md:w-[60%] px-2">
               “Discover our highest-rated indoor plants, loved by plant
               enthusiasts. Bring home greenery that purifies air, brightens
               spaces, and boosts mood.”
@@ -25,6 +33,8 @@ const Home = () => {
       </section>
       <PlantsCare></PlantsCare>
       <ExpertsSections></ExpertsSections>
+      <EcoDecorIdeas></EcoDecorIdeas>
+      <PlantOfWeek></PlantOfWeek>
     </div>
   );
 };

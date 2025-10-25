@@ -16,7 +16,6 @@ const SignUp = () => {
     const photo = form.photo.value;
     const email = form.email.value;
     const password = form.password.value;
-    console.log({ name, photo, email, password });
     if (!/^(?=.*[A-Z])(?=.*[a-z]).{6,}$/.test(password)) {
       toast.error(
         "Password must be at least 6 characters long and include both uppercase and lowercase letters!"
@@ -34,7 +33,6 @@ const SignUp = () => {
           })
           .catch((err) => {
             toast(err);
-            console.log(err);
             setUser(user);
           });
 
@@ -43,7 +41,6 @@ const SignUp = () => {
         navigate("/");
       })
       .catch((error) => {
-        //   const errorCode = error.code;
         const errorMessage = error.message;
         toast.error(errorMessage);
       });

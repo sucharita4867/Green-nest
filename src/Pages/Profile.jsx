@@ -1,20 +1,15 @@
 import React, { use } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import { Link } from "react-router";
+import Loading from "./Loading";
 // import { toast } from "react-toastify";
 
 const Profile = () => {
-  const { user } = use(AuthContext);
+  const { user,loading } = use(AuthContext);
 
-  // const updateBtn = () => {
-  //   updateUser();
-  //   //   .then(() => {
-  //   //     toast.success("Profile updated successfully!");
-  //   //   })
-  //   //   .catch(() => {
-  //   //     toast.error("Failed to update profile!");
-  //   //   });
-  // };
+ if(loading) {
+  return <Loading/>
+ }
 
   if (!user) {
     return (

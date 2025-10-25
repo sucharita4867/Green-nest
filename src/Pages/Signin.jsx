@@ -12,18 +12,14 @@ const Signin = () => {
   const navigate = useNavigate();
   const [show, setShow] = useState(false);
   const emailRef = useRef();
-  // console.log(location);
   const handleLogin = (e) => {
     e.preventDefault();
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;
-    // console.log({ email, password });
 
     signIn(email, password)
-      .then((result) => {
-        const user = result.user;
-        console.log(user);
+      .then(() => {
         toast("Login successful!");
         navigate(`${location.state ? location.state : "/"}`);
       })
@@ -79,7 +75,7 @@ const Signin = () => {
             </div>
             <div>
               <Link
-                to="//forgetPassword"
+                to="/forgetPassword"
                 state={{ email: emailRef.current?.value }}
                 className="link link-hover"
               >

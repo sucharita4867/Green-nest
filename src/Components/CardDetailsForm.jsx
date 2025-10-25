@@ -1,19 +1,16 @@
-// import React, { useState } from "react";
+
 
 import { toast } from "react-toastify";
 
 const CardDetailsForm = () => {
-  //   const [loading, setLoading] = useState(true);
 
   const handledBook = (e) => {
     e.preventDefault();
     const form = e.target;
-    const name = form.name.value;
-    const email = form.email.value;
-    console.log(name, email);
-    toast.success("Booking successful!"); // Success Toast
+     form.name.value;
+    form.email.value;
+    toast.success("Booking successful!"); 
 
-    // Form clear
     form.reset();
   };
   return (
