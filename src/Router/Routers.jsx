@@ -9,6 +9,7 @@ import Signin from "../Pages/Signin";
 import AuthLayout from "../Layout/AuthLayout";
 import DetailsContainer from "../Pages/DetailsContainer";
 import PrivateRoute from "../Provider/Privateroute";
+import Loading from "../Pages/Loading";
 
 const router = createBrowserRouter([
   {
@@ -23,7 +24,6 @@ const router = createBrowserRouter([
       {
         path: "/plants",
         element: <Plants />,
-        // loader: () => fetch("/plants.json").then((res) => res.json()),
       },
       {
         path: "/profile",
@@ -47,6 +47,7 @@ const router = createBrowserRouter([
       </PrivateRoute>
     ),
     loader: () => fetch("/Plants.Json"),
+    hydrateFallbackElement: <Loading></Loading>,
   },
   {
     path: "/auth",

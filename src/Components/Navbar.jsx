@@ -87,13 +87,20 @@ const Navbar = () => {
       </div>
       {user ? (
         <div className="navbar-end flex items-center gap-3">
-          <img src={user.photoURL} alt="" className="w-10 h-10 rounded-full" />
           <details className="dropdown">
-            <summary>{user.displayName}</summary>
-            <ul className="menu dropdown-content bg-base-100 rounded-box">
+            <summary className="cursor-pointer flex items-center gap-2">
+              <img
+                src={user?.photoURL}
+                alt={user?.displayName}
+                className="w-13 h-13 border border-[#6A961F] rounded-full"
+              />
+            </summary>
+
+            <ul className="menu w-[100px] dropdown-content bg-base-100 rounded-box mt-2 p-2 shadow">
+              <li className="text-center font-semibold">{user?.displayName}</li>
               <li>
                 <button
-                  className="bg-[#6A961F] text-white"
+                  className="bg-[#6A961F] text-white text-center rounded-md w-full"
                   onClick={handleSignout}
                 >
                   Sign Out

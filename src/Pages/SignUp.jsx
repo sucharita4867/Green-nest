@@ -6,7 +6,7 @@ import { FaEye, FaShower } from "react-icons/fa";
 import { IoEyeOff } from "react-icons/io5";
 
 const SignUp = () => {
-  const { createUser, setUser } = use(AuthContext);
+  const { createUser, setUser, updateUser } = use(AuthContext);
   const navigate = useNavigate();
   const [show, setShow] = useState(false);
   const handleSignUp = (e) => {
@@ -27,7 +27,17 @@ const SignUp = () => {
     createUser(email, password)
       .then((result) => {
         const user = result.user;
-        setUser(user);
+
+        updateUser({ displayName: name, photoURL: photo })
+          .then(() => {
+            setUser({ ...user, displayName: name, photoURL: photo });
+          })
+          .catch((err) => {
+            toast(err);
+            console.log(err);
+            setUser(user);
+          });
+
         toast.success("Signup successful! Welcome to GreenNest 🌿");
         form.reset();
         navigate("/");
