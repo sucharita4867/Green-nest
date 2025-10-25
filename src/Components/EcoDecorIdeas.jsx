@@ -12,7 +12,7 @@ const EcoDecorIdeas = () => {
       </p>
 
       <div className="grid md:grid-cols-3 gap-6">
-        {/* Card 1 */}
+      
         <div className="card bg-base-100 shadow-lg border-[#6A961F] hover:border rounded-2xl transition duration-300">
           <figure>
             <img
@@ -32,7 +32,7 @@ const EcoDecorIdeas = () => {
           </div>
         </div>
 
-        {/* Card 2 */}
+     
         <div className="card bg-base-100 shadow-lg border-[#6A961F] hover:border rounded-2xl  transition duration-300">
           <figure>
             <img
@@ -52,7 +52,7 @@ const EcoDecorIdeas = () => {
           </div>
         </div>
 
-        {/* Card 3 */}
+   
         <div className="card bg-base-100 shadow-lg rounded-2xl border-[#6A961F] hover:border  transition duration-300">
           <figure>
             <img

@@ -51,6 +51,7 @@ const Navbar = () => {
   );
   return (
     <section className="w-full shadow  ">
+      {import.meta.env.VITE_name}
       <div className="navbar w-11/12 mx-auto ">
         <div className="navbar-start ">
           <div className="dropdown">
@@ -97,8 +98,8 @@ const Navbar = () => {
                 />
               </summary>
 
-              <ul className="menu w-[100px] dropdown-content bg-base-100 rounded-box mt-2 p-2 shadow">
-                <li className="text-center font-semibold">
+              <ul className="menu md:w-[100px] dropdown-content bg-base-100 rounded-box mt-2 p-2 shadow">
+                <li className="text-center text-sm md:font-semibold">
                   {user?.displayName}
                 </li>
                 <li>
