@@ -11,6 +11,7 @@ import DetailsContainer from "../Pages/DetailsContainer";
 import PrivateRoute from "../Provider/Privateroute";
 import Loading from "../Pages/Loading";
 import UpdateProfile from "../Pages/Updateprofile";
+import ForgetPassword from "../Pages/forgetPassword";
 
 const router = createBrowserRouter([
   {
@@ -34,15 +35,19 @@ const router = createBrowserRouter([
   },
   {
     path: "/auth",
-    element: <p>authentication layout</p>,
+    element: <AuthLayout />,
   },
   {
     path: "/*",
     element: <h2>error 404 layout</h2>,
   },
   {
-    path: '/updateProfile',
-    element: <UpdateProfile/>
+    path: "/forgetPassword",
+    element: <ForgetPassword />,
+  },
+  {
+    path: "/updateProfile",
+    element: <UpdateProfile />,
   },
   {
     path: "/card-details/:id",

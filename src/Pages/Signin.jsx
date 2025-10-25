@@ -1,6 +1,6 @@
-import React, { use, useState } from "react";
+import React, { use, useRef, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
-import { Link, useLocation, useNavigate } from "react-router";
+import { Link, Links, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../Provider/AuthProvider";
 import { toast } from "react-toastify";
 import { FaEye } from "react-icons/fa";
@@ -11,6 +11,7 @@ const Signin = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const [show, setShow] = useState(false);
+  const emailRef = useRef();
   // console.log(location);
   const handleLogin = (e) => {
     e.preventDefault();
@@ -56,13 +57,14 @@ const Signin = () => {
               name="email"
               className="input"
               placeholder="Email"
+              ref={emailRef}
               required
             />
             {/* password */}
             <div className="relative">
               <label className="label">Password</label>
               <input
-                type={show ? "text " : "password"}
+                type={show ? "text" : "password"}
                 name="password"
                 className="input"
                 placeholder="Password"
@@ -76,9 +78,15 @@ const Signin = () => {
               </span>
             </div>
             <div>
-              <a className="link link-hover">Forgot password?</a>
+              <Link
+                to="//forgetPassword"
+                state={{ email: emailRef.current?.value }}
+                className="link link-hover"
+              >
+                Forgot password?
+              </Link>
             </div>
-            <button type="submit" className="btn mt-btn mt-2">
+            <button type="submit" className="btn bg-[#6A961F] text-white mt-2">
               Login
             </button>
             <div onClick={googleClick}>

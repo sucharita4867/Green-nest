@@ -5,7 +5,7 @@ import { AuthContext } from "../Provider/AuthProvider";
 import { toast } from "react-toastify";
 
 const UpdateProfile = () => {
-  const { user, updateUser } = use(AuthContext);
+  const { user, updateUser, setUser } = use(AuthContext);
   const handleUpdate = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -13,6 +13,7 @@ const UpdateProfile = () => {
     const photo = form.photo.value;
     updateUser(name, photo)
       .then(() => {
+        setUser({ ...user, displayName: name, photoURL: photo });
         toast.success("Profile updated successfully!");
         form.reset();
       })
