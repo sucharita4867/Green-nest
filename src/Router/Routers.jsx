@@ -10,6 +10,7 @@ import AuthLayout from "../Layout/AuthLayout";
 import DetailsContainer from "../Pages/DetailsContainer";
 import PrivateRoute from "../Provider/Privateroute";
 import Loading from "../Pages/Loading";
+import UpdateProfile from "../Pages/Updateprofile";
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
   {
     path: "/*",
     element: <h2>error 404 layout</h2>,
+  },
+  {
+    path: '/updateProfile',
+    element: <UpdateProfile/>
   },
   {
     path: "/card-details/:id",

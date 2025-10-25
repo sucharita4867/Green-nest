@@ -1,12 +1,20 @@
 import React, { use } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
+import { Link } from "react-router";
+// import { toast } from "react-toastify";
 
 const Profile = () => {
-  const { user ,updateUser} = use(AuthContext);
+  const { user } = use(AuthContext);
 
-  const updateBtn =()=>{
-    updateUser()
-  }
+  // const updateBtn = () => {
+  //   updateUser();
+  //   //   .then(() => {
+  //   //     toast.success("Profile updated successfully!");
+  //   //   })
+  //   //   .catch(() => {
+  //   //     toast.error("Failed to update profile!");
+  //   //   });
+  // };
 
   if (!user) {
     return (
@@ -31,8 +39,8 @@ const Profile = () => {
         <p className="text-gray-600">{user?.email}</p>
 
         <div className="mt-4">
-          <button onClick={updateBtn} className="btn bg-[#6A961F] text-white hover:bg-[#587c17]">
-            Edit Profile
+          <button className="btn bg-[#6A961F] text-white hover:bg-[#587c17]">
+            <Link to="/updateProfile">Edit Profile</Link>
           </button>
         </div>
       </div>
