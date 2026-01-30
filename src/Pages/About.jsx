@@ -1,13 +1,13 @@
 const About = () => {
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
-      <div className="max-w-5xl mx-auto px-4">
+    <div className="min-h-screen bg-gray-50 py-10">
+      <div className="w-11/12 mx-auto px-4">
         {/* Heading */}
         <div className="text-center mb-10">
-          <h1 className="text-4xl font-bold text-gray-900">
+          <h1 className="text-[#0D3C00]  text-4xl font-bold">
             About This Project
           </h1>
-          <p className="mt-3 text-gray-600 max-w-2xl mx-auto">
+          <p className="flex justify-center text-lg mt-2 text-[#848483]">
             Learn more about this React project, its purpose, and the
             technologies used to build it.
           </p>
