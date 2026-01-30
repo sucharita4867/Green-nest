@@ -13,6 +13,7 @@ import Loading from "../Pages/Loading";
 import UpdateProfile from "../Pages/Updateprofile";
 import ForgetPassword from "../Pages/forgetPassword";
 import Errorpage from "../Components/Errorpage";
+import About from "../Pages/About";
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
       {
         path: "/profile",
         element: <Profile></Profile>,
+      },
+      {
+        path: "/about",
+        element: <About />,
       },
     ],
   },
