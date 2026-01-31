@@ -9,7 +9,7 @@ const Plants = () => {
     return <Loading />;
   }
   return (
-    <div className="mb-10">
+    <div className="mb-10 bg-[#F7FAF2]">
       <HomePlants />
     </div>
   );
