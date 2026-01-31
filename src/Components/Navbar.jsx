@@ -42,6 +42,16 @@ const Navbar = () => {
           className={({ isActive }) =>
             isActive ? "text-[#6A961F] underline" : ""
           }
+          to={"/about"}
+        >
+          About
+        </NavLink>
+      </li>
+      <li className="text-[#0D3C00] font-semibold text-lg">
+        <NavLink
+          className={({ isActive }) =>
+            isActive ? "text-[#6A961F] underline" : ""
+          }
           to={"/profile"}
         >
           Profile
