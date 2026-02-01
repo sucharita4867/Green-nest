@@ -11,7 +11,7 @@ const Footer = () => {
           About
         </NavLink>
         <NavLink to="/contact" className="link link-hover">
-          Contact Contact contact contact
+          Contact
         </NavLink>
         <NavLink className="link link-hover">Privacy Policy</NavLink>
       </nav>
