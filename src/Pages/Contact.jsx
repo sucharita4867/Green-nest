@@ -1,10 +1,10 @@
 const Contact = () => {
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
+    <div className="min-h-screen  py-12">
       <div className="max-w-4xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-10">
-          <h1 className="text-4xl font-bold text-gray-900">Contact Us</h1>
+          <h1 className="text-4xl font-bold text-[#0D3C00] mb-4">Contact Us</h1>
           <p className="mt-3 text-gray-600 max-w-xl mx-auto">
             Have questions, feedback, or suggestions? Feel free to reach
             out—we’d love to hear from you.
@@ -75,7 +75,7 @@ const Contact = () => {
 
             <button
               type="submit"
-              className="w-full bg-green-700 text-white py-2 rounded-lg font-medium hover:bg-green-800 transition"
+              className="bg-[#6A961F] w-full text-white px-6 py-2 rounded-lg font-semibold hover:bg-[#557C1A] transition-all"
             >
               Send Message
             </button>
