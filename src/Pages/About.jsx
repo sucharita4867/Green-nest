@@ -2,7 +2,6 @@ const About = () => {
   return (
     <div className="min-h-screen bg-gray-50 py-10">
       <div className="w-11/12 mx-auto px-4">
-        {/* Heading */}
         <div className="text-center mb-10">
           <h1 className="text-[#0D3C00]  text-4xl font-bold">
             About This Project
