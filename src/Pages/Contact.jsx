@@ -12,7 +12,6 @@ const Contact = () => {
         </div>
 
         <div className="bg-white rounded-xl shadow-md p-8 grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Contact Info */}
           <div className="space-y-5">
             <h2 className="text-2xl font-semibold text-gray-900">
               Get in Touch
