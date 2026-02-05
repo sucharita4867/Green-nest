@@ -12,7 +12,6 @@ const About = () => {
           </p>
         </div>
 
-        {/* Content Card */}
         <div className="bg-white rounded-xl shadow-md p-8 space-y-6">
           <p className="text-gray-700 leading-relaxed">
             This project is built using{" "}
