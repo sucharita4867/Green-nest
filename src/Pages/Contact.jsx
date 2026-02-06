@@ -31,7 +31,7 @@ const Contact = () => {
                 📞 <span className="font-medium">Phone:</span> +91 98765 43210
               </p>
               <p>
-                📍 <span className="font-medium">Location:</span> India
+                <span className="font-medium">Location:</span> India
               </p>
             </div>
           </div>
