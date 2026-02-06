@@ -44,7 +44,7 @@ const Navbar = () => {
           }
           to={"/about"}
         >
-          Abou
+          About
         </NavLink>
       </li>
       <li className="text-[#0D3C00] font-semibold text-lg">
