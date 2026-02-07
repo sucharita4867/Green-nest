@@ -5,11 +5,11 @@ import Loading from "./Loading";
 // import { toast } from "react-toastify";
 
 const Profile = () => {
-  const { user,loading } = use(AuthContext);
+  const { user, loading } = use(AuthContext);
 
- if(loading) {
-  return <Loading/>
- }
+  if (loading) {
+    return <Loading />;
+  }
 
   if (!user) {
     return (
@@ -34,7 +34,7 @@ const Profile = () => {
         <p className="text-gray-600">{user?.email}</p>
 
         <div className="mt-4">
-          <button className="btn bg-[#6A961F] text-white hover:bg-[#587c17]">
+          <button className="btn text-white bg-[#0D3C00] hover:bg-[#6A961F]">
             <Link to="/updateProfile">Edit Profile</Link>
           </button>
         </div>
