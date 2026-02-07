@@ -114,7 +114,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <button
-                    className="bg-[#6A961F] text-white text-center rounded-md w-full"
+                    className="btn text-white bg-[#0D3C00] hover:bg-[#6A961F] text-center rounded-md w-full"
                     onClick={handleSignout}
                   >
                     Sign Out
