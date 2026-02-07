@@ -125,7 +125,10 @@ const Navbar = () => {
           </div>
         ) : (
           <div className="navbar-end   ">
-            <Link className="btn bg-[#6A961F] text-white" to="/auth/signin">
+            <Link
+              className="btn text-white bg-[#0D3C00] hover:bg-[#6A961F] "
+              to="/auth/signin"
+            >
               Sign In
             </Link>
           </div>
