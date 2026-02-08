@@ -2,7 +2,6 @@ import React, { use } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
 import { Link } from "react-router";
 import Loading from "./Loading";
-// import { toast } from "react-toastify";
 
 const Profile = () => {
   const { user, loading } = use(AuthContext);
