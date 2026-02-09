@@ -26,7 +26,7 @@ const PlantsCare = () => {
           <ol className=" ">
             <p className="text-2xl font-medium text-[#0D3C00]">Watering:</p>
             <li className="text-lg text-[#848483] ">
-              “Water your plants 2–3 times per week or when the top 1–2 inches
+              “Water your plants 2-3 times per week or when the top 1–2 inches
               of soil feel dry. Avoid overwatering, as it can damage roots and
               hinder healthy growth.”
             </li>
@@ -34,7 +34,7 @@ const PlantsCare = () => {
           <div>
             <p className="text-2xl font-medium text-[#0D3C00]">Sunlight:</p>
             <p className="text-lg text-[#848483] ">
-              “Provide 4–6 hours of indirect sunlight daily for your plants.
+              “Provide 4-6 hours of indirect sunlight daily for your plants.
               Avoid harsh direct sunlight for sensitive plants, ensuring they
               receive enough light to grow healthy and strong.”
             </p>
@@ -42,7 +42,7 @@ const PlantsCare = () => {
           <div>
             <p className="text-2xl font-medium text-[#0D3C00]">Fertilizer:</p>
             <p className="text-lg text-[#848483] ">
-              “Apply a balanced liquid fertilizer every 4–6 weeks during spring
+              “Apply a balanced liquid fertilizer every 4-6 weeks during spring
               and summer to promote healthy growth. Reduce or pause fertilizing
               during winter when plants grow slowly.”
             </p>
