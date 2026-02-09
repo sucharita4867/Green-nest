@@ -16,7 +16,7 @@ const About = () => {
 
         <div className="bg-white rounded-xl shadow-md p-8 space-y-6">
           <p className="text-gray-700 leading-relaxed">
-            This project is built using{" "}
+            This project is built using
             <span className="font-semibold">React</span>
             to understand component-based architecture, routing, and UI
             development. The main goal is to practice building real-world
