@@ -24,7 +24,7 @@ const About = () => {
           </p>
 
           <p className="text-gray-700 leading-relaxed">
-            Navigation between pages is handled using{" "}
+            Navigation between pages is handled using
             <span className="font-semibold">React Router DOM</span>, allowing
             smooth client-side routing without reloading the browser.
           </p>
