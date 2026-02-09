@@ -30,12 +30,11 @@ const About = () => {
           </p>
 
           <p className="text-gray-700 leading-relaxed">
-            Styling is done with{" "}
+            Styling is done with
             <span className="font-semibold">Tailwind CSS</span>, which helps
             create modern and responsive designs quickly using utility classes.
           </p>
 
-          {/* Tech Stack */}
           <div>
             <h3 className="text-xl font-semibold text-gray-900 mb-3">
               Technologies Used
