@@ -36,7 +36,7 @@ const PlantOfTheWeek = () => {
             </h3>
             <p className="text-gray-700">
               Known for its air-purifying abilities, the Snake Plant thrives on
-              neglect! It’s a perfect choice for beginners who forget to water
+              neglect! It's a perfect choice for beginners who forget to water
               their plants often.
             </p>
             <ul className="list-disc list-inside text-gray-600">
