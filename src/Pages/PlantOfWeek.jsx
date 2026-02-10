@@ -14,7 +14,7 @@ const PlantOfTheWeek = () => {
         </h2>
 
         <p className="text-gray-600 mb-10">
-          Discover the beauty of indoor greenery! This week’s featured plant is
+          Discover the beauty of indoor greenery! This week's featured plant is
           perfect for adding freshness and calmness to your space.
         </p>
 
