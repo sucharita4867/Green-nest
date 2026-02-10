@@ -26,7 +26,7 @@ const PlantsCare = () => {
           <ol className=" ">
             <p className="text-2xl font-medium text-[#0D3C00]">Watering:</p>
             <li className="text-lg text-[#848483] ">
-              “Water your plants 2-3 times per week or when the top 1–2 inches
+              “Water your plants 2-3 times per week or when the top 1-2 inches
               of soil feel dry. Avoid overwatering, as it can damage roots and
               hinder healthy growth.”
             </li>
